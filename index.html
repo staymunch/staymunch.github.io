@@ -1,340 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GLI Garage: In-depth reviews and performance testing of aftermarket modifications for the Volkswagen Jetta GLI. Real mods, real results.">
-    <meta name="keywords" content="VW GLI, Jetta GLI, GLI mods, GLI modifications, GLI performance, GLI reviews, car mods">
-    <meta name="author" content="GLI Garage">
-    <meta property="og:title" content="GLI Garage - Real Mods. Real Results.">
-    <meta property="og:description" content="In-depth reviews and performance testing of aftermarket modifications for the Volkswagen Jetta GLI.">
-    <meta property="og:type" content="website">
-    <title>GLI Garage - Volkswagen Jetta GLI Modification Reviews & Testing</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Source Serif 4', serif;
-            background-color: #0f0f10;
-            color: #f0ece6;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .nav {
-            position: sticky;
-            top: 0;
-            background-color: #0f0f10;
-            border-bottom: 2px solid #e63022;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .nav-logo {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #e63022;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #f0ece6;
-            text-decoration: none;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #e63022;
-        }
-
-        .hero {
-            padding: 8rem 2rem;
-            text-align: center;
-            background: linear-gradient(135deg, #0f0f10 0%, #1a1a1c 100%);
-            border-bottom: 1px solid #333;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            color: #e63022;
-            text-transform: uppercase;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            font-style: italic;
-            color: #f0ece6;
-            opacity: 0.9;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #e63022;
-            text-transform: uppercase;
-        }
-
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .article-card {
-            background-color: #1a1a1c;
-            border: 1px solid #333;
-            padding: 2rem;
-            border-radius: 8px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .article-card:hover {
-            transform: translateY(-5px);
-            border-color: #e63022;
-        }
-
-        .article-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #f0ece6;
-        }
-
-        .article-card p {
-            color: #f0ece6;
-            opacity: 0.8;
-            margin-bottom: 1rem;
-        }
-
-        .article-card a {
-            display: inline-block;
-            color: #e63022;
-            text-decoration: none;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 1rem;
-        }
-
-        .article-card a:hover {
-            text-decoration: underline;
-        }
-
-        .about-section {
-            background-color: #1a1a1c;
-            padding: 4rem 2rem;
-            margin: 4rem 0;
-            border-top: 2px solid #e63022;
-            border-bottom: 2px solid #e63022;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #e63022;
-            text-transform: uppercase;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        .adsense-placeholder {
-            background-color: #1a1a1c;
-            border: 2px dashed #333;
-            padding: 2rem;
-            text-align: center;
-            margin: 3rem auto;
-            max-width: 728px;
-        }
-
-        .footer {
-            background-color: #0a0a0b;
-            padding: 3rem 2rem;
-            border-top: 2px solid #e63022;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #e63022;
-            text-transform: uppercase;
-        }
-
-        .footer p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            opacity: 0.8;
-            margin-bottom: 1rem;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #333;
-            font-size: 0.9rem;
-            opacity: 0.6;
-        }
-
-        @media (max-width: 768px) {
-            .nav {
-                flex-direction: column;
-                padding: 1rem;
-                gap: 1rem;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 0.5rem;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .hero {
-                padding: 4rem 1rem;
-            }
-
-            .articles-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .container {
-                padding: 2rem 1rem;
-            }
-
-            .about-section {
-                padding: 2rem 1rem;
-            }
-
-            .footer {
-                padding: 2rem 1rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLI Garage | VW Jetta GLI Mods, Reviews and Guides</title>
+  <meta name="description" content="Real-world VW Jetta GLI mod guides, reviews and performance upgrades written by an actual owner. 2023 Jetta GLI Autobahn, Black Package.">
+  <meta property="og:title" content="GLI Garage - VW GLI Mod Guides">
+  <meta property="og:description" content="Honest, first-hand VW Jetta GLI reviews and mod guides.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=1600&q=85&fit=crop">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
 </head>
 <body>
-    <nav class="nav">
-        <a href="/" class="nav-logo">GLI GARAGE</a>
-        <ul class="nav-links">
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#guides">Guides</a></li>
-            <li><a href="#dyno">Dyno Results</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </nav>
 
-    <section class="hero">
-        <h1>GLI Garage</h1>
-        <p>Real mods. Real results.</p>
-    </section>
-
-    <div class="container">
-        <h2 class="section-title">Featured Articles</h2>
-        
-        <div class="articles-grid">
-            <article class="article-card">
-                <h3>Best Cold Air Intakes for the 7th Gen GLI</h3>
-                <p>We tested five popular cold air intake systems on our 2023 Jetta GLI Autobahn to see which delivers the best power gains and sound. Dyno charts and real world performance data included.</p>
-                <a href="#">Read More →</a>
-            </article>
-
-            <article class="article-card">
-                <h3>DSG vs Manual: Which Transmission is Right for Your GLI?</h3>
-                <p>An honest comparison of the 6-speed manual and 7-speed DSG options available in the Jetta GLI. We cover performance, reliability, and driving experience to help you decide.</p>
-                <a href="#">Read More →</a>
-            </article>
-
-            <article class="article-card">
-                <h3>Stage 1 Tune Comparison: IE vs APR vs Unitronic</h3>
-                <p>We put three of the most popular Stage 1 ECU tunes to the test on the same GLI. Find out which tune offers the best power delivery, reliability, and value for your 2.0T engine.</p>
-                <a href="#">Read More →</a>
-            </article>
-        </div>
-
-        <!-- ADSENSE PLACEHOLDER: paste your AdSense code here -->
-        <div class="adsense-placeholder">
-            <p style="color: #666; font-family: 'Barlow Condensed', sans-serif;">Advertisement Space</p>
-        </div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">GLI Garage</a>
+      <ul class="nav-links">
+        <li><a href="#">Intakes</a></li>
+        <li><a href="#">Exhaust</a></li>
+        <li><a href="#">Tuning</a></li>
+        <li><a href="#">Suspension</a></li>
+        <li><a href="#">Wheels</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="#">Intakes</a><a href="#">Exhaust</a>
+      <a href="#">Tuning</a><a href="#">Suspension</a><a href="#">Wheels</a>
+    </div>
+  </nav>
 
-    <section class="about-section" id="about">
-        <div class="about-content">
-            <h2>About GLI Garage</h2>
-            <p>GLI Garage is dedicated to providing honest, data-driven reviews of aftermarket modifications for the Volkswagen Jetta GLI. Every part we review is purchased, installed, and tested on our own 2023 GLI Autobahn in Opal White with Black Package. We use dyno testing, real world performance metrics, and long term durability assessments to give you the information you need to make smart modification decisions. No sponsored fluff, just real results from real enthusiasts.</p>
-        </div>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <div id="particles-js"></div>
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=1600&q=85&fit=crop')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">2023 Jetta GLI Autobahn</span>
+      <h1 class="hero-title">Real Mods.<br>Real Results.</h1>
+      <p class="hero-sub">First-hand guides, honest reviews and performance upgrades for the VW Jetta GLI. Written by an owner, not an algorithm.</p>
+      <a href="#articles" class="btn-primary">Read the guides</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <h3>Editorial Disclosure</h3>
-            <p>GLI Garage operates independently and purchases all products reviewed with our own funds unless explicitly stated otherwise. We may earn affiliate commissions from links on this site, which help support our testing and content creation. These relationships do not influence our editorial opinions or test results. All reviews reflect our honest assessment based on hands-on testing and data collection.</p>
-            <p>This site is not affiliated with, endorsed by, or connected to Volkswagen AG or Volkswagen Group of America. All trademarks and model names are the property of their respective owners.</p>
-            <div class="footer-bottom">
-                <p>&copy; 2024 GLI Garage. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+  <!-- FEATURED ARTICLES -->
+  <section class="articles-section" id="articles">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Latest Guides</span>
+        <h2 class="section-title">What to mod first</h2>
+      </div>
+      <div class="articles-grid">
+        <article class="article-card reveal" style="--delay: 0s">
+          <a href="article-template.html" class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80&fit=crop" alt="Best Cold Air Intakes for the 2023 VW Jetta GLI" loading="lazy">
+            <span class="card-category">Intake</span>
+          </a>
+          <div class="card-body">
+            <h3><a href="article-template.html">Best Cold Air Intakes for the 2023 VW Jetta GLI</a></h3>
+            <p>The GLI's 2.0T responds well to intake upgrades. We break down CTS Turbo, IE and stock comparisons on our Autobahn.</p>
+            <div class="card-meta"><span>8 min read</span><span>Intake</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal" style="--delay: 0.1s">
+          <a href="article-template.html" class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&q=80&fit=crop" alt="COBB Accessport Stage 1 Review" loading="lazy">
+            <span class="card-category">Tuning</span>
+          </a>
+          <div class="card-body">
+            <h3><a href="article-template.html">COBB Accessport Stage 1: Is It Worth It on the GLI?</a></h3>
+            <p>After 6 months running Stage 1 on 93 octane we have a clear answer. Here is what actually changed and what did not.</p>
+            <div class="card-meta"><span>11 min read</span><span>Tuning</span></div>
+          </div>
+        </article>
+        <article class="article-card reveal" style="--delay: 0.2s">
+          <a href="article-template.html" class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&q=80&fit=crop" alt="Wheel and Tire Upgrades for VW Jetta GLI" loading="lazy">
+            <span class="card-category">Wheels</span>
+          </a>
+          <div class="card-body">
+            <h3><a href="article-template.html">Wheel and Tire Upgrades for the Jetta GLI</a></h3>
+            <p>The stock 18s on the Black Package look great but there is room to go wider. Here are the best fitments we found.</p>
+            <div class="card-meta"><span>7 min read</span><span>Wheels</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip">
+    <div class="container about-inner reveal">
+      <div class="about-img-wrap">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80&fit=crop" alt="2023 VW Jetta GLI white Black Package">
+      </div>
+      <div class="about-text">
+        <span class="section-eyebrow">About this site</span>
+        <h2>Written by an actual owner</h2>
+        <p>This site covers the 2023 Jetta GLI Autobahn from the perspective of someone who actually owns one. White with the Black Package, 228 horsepower, 7-speed DSG. Every mod mentioned here has either been tested personally or thoroughly researched in the GLI community. No filler. No generic listicles.</p>
+        <p>The GLI sits in a unique spot. More practical than the Golf GTI, more fun than the standard Jetta, and punching well above its price point with the limited-slip differential and adaptive suspension. It deserves better content than what is out there.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECS BAR -->
+  <section class="specs-bar">
+    <div class="container specs-grid reveal">
+      <div class="spec-item"><span class="spec-num">228</span><span class="spec-label">Horsepower</span></div>
+      <div class="spec-item"><span class="spec-num">258</span><span class="spec-label">lb-ft Torque</span></div>
+      <div class="spec-item"><span class="spec-num">7-spd</span><span class="spec-label">DSG Available</span></div>
+      <div class="spec-item"><span class="spec-num">LSD</span><span class="spec-label">Std. Limited-Slip Diff</span></div>
+      <div class="spec-item"><span class="spec-num">MQB</span><span class="spec-label">Platform</span></div>
+    </div>
+  </section>
+
+  <!-- ADSENSE PLACEHOLDER -->
+  <!-- <div class="ad-slot container">
+    Paste your Google AdSense code here once approved
+  </div> -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">GLI Garage</div>
+      <p class="footer-disc">This site may contain partner links. If you click and purchase we may earn a commission at no extra cost to you. All opinions are our own.</p>
+      <p class="footer-copy">&copy; 2025 GLI Garage. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // GSAP + ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Nav scroll effect
+    ScrollTrigger.create({
+      start: "top -60",
+      onEnter: () => document.getElementById('nav').classList.add('scrolled'),
+      onLeaveBack: () => document.getElementById('nav').classList.remove('scrolled'),
+    });
+
+    // Reveal animations
+    gsap.utils.toArray('.reveal').forEach(el => {
+      gsap.fromTo(el,
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+          delay: parseFloat(getComputedStyle(el).getPropertyValue('--delay')) || 0,
+          scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" }
+        }
+      );
+    });
+
+    // Hero title split animation
+    gsap.from('.hero-title', { opacity: 0, y: 60, duration: 1.1, ease: "expo.out", delay: 0.3 });
+    gsap.from('.hero-eyebrow', { opacity: 0, y: 20, duration: 0.8, delay: 0.1 });
+    gsap.from('.hero-sub', { opacity: 0, y: 30, duration: 0.9, delay: 0.6 });
+    gsap.from('.btn-primary', { opacity: 0, y: 20, duration: 0.8, delay: 0.9 });
+
+    // Specs counter animation
+    ScrollTrigger.create({
+      trigger: '.specs-bar',
+      start: 'top 80%',
+      once: true,
+      onEnter: () => {
+        document.querySelectorAll('.spec-num').forEach(el => {
+          const val = parseFloat(el.textContent);
+          if (!isNaN(val)) {
+            gsap.from(el, { textContent: 0, duration: 1.5, ease: "power2.out",
+              snap: { textContent: 1 },
+              onUpdate: function() { el.textContent = Math.round(this.targets()[0].textContent); }
+            });
+          }
+        });
+      }
+    });
+
+    // Hamburger menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    });
+
+    // Particles
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 40, density: { enable: true, value_area: 800 } },
+        color: { value: "#e63022" },
+        shape: { type: "circle" },
+        opacity: { value: 0.15, random: true },
+        size: { value: 2, random: true },
+        line_linked: { enable: true, distance: 150, color: "#e63022", opacity: 0.08, width: 1 },
+        move: { enable: true, speed: 0.8, direction: "none", random: true, out_mode: "out" }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: false } }
+      }
+    });
+  </script>
 </body>
 </html>

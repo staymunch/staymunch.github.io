@@ -1,425 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Template | GLI Garage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-
-        nav {
-            position: sticky;
-            top: 0;
-            background: #111;
-            border-bottom: 2px solid #d4112a;
-            padding: 1.2rem 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(212, 17, 42, 0.2);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #fff;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: #d4112a;
-        }
-
-        .nav-links a {
-            color: #e0e0e0;
-            text-decoration: none;
-            margin-left: 2rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #d4112a;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .disclosure-banner {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            border-left: 4px solid #d4112a;
-            padding: 1rem 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            color: #b0b0b0;
-        }
-
-        .disclosure-banner strong {
-            color: #d4112a;
-        }
-
-        .content-wrapper {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .main-content {
-            flex: 0 0 65%;
-        }
-
-        .sidebar {
-            flex: 0 0 calc(35% - 2rem);
-        }
-
-        h1 {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .meta-row {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #333;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .category-tag {
-            background: #d4112a;
-            color: #fff;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .article-body {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #c0c0c0;
-        }
-
-        .article-body p {
-            margin-bottom: 1.5rem;
-        }
-
-        .product-box {
-            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
-            border: 2px solid #333;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .product-box h3 {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1.6rem;
-            color: #fff;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-price {
-            font-size: 1.4rem;
-            color: #d4112a;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .product-box h4 {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1.1rem;
-            color: #fff;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-box ul {
-            list-style: none;
-            margin-bottom: 1rem;
-        }
-
-        .product-box ul li {
-            padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.5rem;
-            color: #b0b0b0;
-        }
-
-        .product-box ul li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #d4112a;
-            font-weight: bold;
-        }
-
-        .product-box.cons ul li:before {
-            content: "✗";
-        }
-
-        .sidebar-section {
-            background: #151515;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .sidebar-section h3 {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1.4rem;
-            color: #fff;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #d4112a;
-        }
-
-        .related-posts {
-            list-style: none;
-        }
-
-        .related-posts li {
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #2a2a2a;
-        }
-
-        .related-posts li:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .related-posts a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .related-posts a:hover {
-            color: #d4112a;
-        }
-
-        .related-posts .post-date {
-            font-size: 0.85rem;
-            color: #666;
-            display: block;
-            margin-top: 0.3rem;
-        }
-
-        .author-bio {
-            text-align: center;
-        }
-
-        .author-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: #d4112a;
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .author-name {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 1.2rem;
-            color: #fff;
-            margin-bottom: 0.5rem;
-        }
-
-        .author-description {
-            font-size: 0.9rem;
-            color: #888;
-            line-height: 1.6;
-        }
-
-        .adsense-placeholder {
-            background: #1a1a1a;
-            border: 2px dashed #333;
-            padding: 3rem;
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-            border-radius: 8px;
-        }
-
-        footer {
-            background: #111;
-            border-top: 2px solid #d4112a;
-            padding: 2rem 0;
-            margin-top: 4rem;
-            text-align: center;
-            color: #666;
-        }
-
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-
-        @media (max-width: 968px) {
-            .content-wrapper {
-                flex-direction: column;
-            }
-
-            .main-content,
-            .sidebar {
-                flex: 0 0 100%;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .meta-row {
-                flex-wrap: wrap;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Cold Air Intakes for the 2023 VW Jetta GLI | GLI Garage</title>
+  <meta name="description" content="Tested intake upgrades for the 2023 VW Jetta GLI Autobahn 2.0T. CTS Turbo, IE intake and more compared with real results.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">GLI <span>GARAGE</span></a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="#">Reviews</a>
-                <a href="#">Modifications</a>
-                <a href="#">Maintenance</a>
-            </div>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">GLI Garage</a>
+      <ul class="nav-links">
+        <li><a href="#">Intakes</a></li><li><a href="#">Exhaust</a></li>
+        <li><a href="#">Tuning</a></li><li><a href="#">Suspension</a></li><li><a href="#">Wheels</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="index.html">Home</a><a href="#">Intakes</a><a href="#">Exhaust</a>
+      <a href="#">Tuning</a><a href="#">Suspension</a>
+    </div>
+  </nav>
+
+  <!-- DISCLOSURE -->
+  <div class="disclosure-bar">
+    <div class="container">This article contains partner links. Purchasing through them supports this site at no extra cost to you.</div>
+  </div>
+
+  <!-- ARTICLE HERO -->
+  <div class="article-hero">
+    <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&q=80&fit=crop" alt="2023 VW Jetta GLI engine bay intake upgrade">
+    <div class="article-hero-overlay"></div>
+  </div>
+
+  <div class="container article-layout">
+    <!-- MAIN CONTENT -->
+    <main class="article-main">
+      <div class="article-meta-top">
+        <span class="tag">Intake</span>
+        <span class="meta-sep">January 2025</span>
+        <span class="meta-sep">9 min read</span>
+      </div>
+
+      <h1 class="article-title reveal">Best Cold Air Intakes for the 2023 VW Jetta GLI Autobahn</h1>
+
+      <p class="article-lead reveal">The GLI's 2.0T is a solid engine from the factory but the stock airbox is conservative. Swapping it out is one of the best first mods you can do because it makes the car louder, punchier and more responsive without touching the tune.</p>
+
+      <p class="reveal">The 2023 Jetta GLI Autobahn shares its turbocharged 2.0-liter engine architecture with the Golf GTI, though it produces 228 horsepower compared to the GTI's 241. The difference in power output comes partly from software and partly from the intake setup. A better intake lets the turbo breathe more freely, which translates to improved spool time and that satisfying induction sound at wide-open throttle.</p>
+
+      <h2 class="reveal">What to look for in a GLI intake</h2>
+      <p class="reveal">Not every cold air intake is created equal for the A7 Jetta platform. The engine bay layout means you need fitment confirmed specifically for the GLI, not just the GTI. The two are related but not interchangeable when it comes to intake routing. Look for a kit that includes a heat shield, uses a high-flow cone filter and comes with all required hardware for a clean install.</p>
+
+      <!-- PRODUCT BOX 1 -->
+      <div class="product-box reveal">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80&fit=crop" alt="CTS Turbo Intake for VW Jetta GLI" class="product-img">
+        <div class="product-info">
+          <span class="product-badge">Top Pick</span>
+          <h3 class="product-name">CTS Turbo Intake System</h3>
+          <div class="product-price">~$329</div>
+          <ul class="product-pros">
+            <li>Confirmed fitment on A7 GLI</li>
+            <li>Includes full heat shield</li>
+            <li>Noticeably improved induction sound</li>
+            <li>Drop-in install under two hours</li>
+          </ul>
+          <a href="#" class="btn-product">Check Price <!-- PRODUCT LINK HERE --></a>
         </div>
-    </nav>
+      </div>
 
-    <div class="container">
-        <div class="disclosure-banner">
-            <strong>Editorial Disclosure:</strong> GLI Garage is reader supported. When you purchase through links on our site, we may earn an affiliate commission at no cost to you. This helps us continue creating quality content for the VW GLI community.
+      <p class="reveal">After running the CTS Turbo intake on our white 2023 GLI Autobahn for several months, the most noticeable change was at partial throttle in Sport mode. The turbo spools faster and the engine pulls more eagerly from 3,000 RPM upward. Paired with a COBB Accessport Stage 1 93-octane map the combination is genuinely satisfying for a daily driver.</p>
+
+      <h2 class="reveal">Runner Up: IE Intake</h2>
+      <p class="reveal">Integrated Engineering makes a strong alternative that some owners prefer for its more subtle sound profile. If you want the airflow gains without as much intake noise in the cabin, the IE kit is worth considering. It sits slightly higher in price but comes with excellent build quality and a lifetime filter warranty.</p>
+
+      <!-- PRODUCT BOX 2 -->
+      <div class="product-box reveal">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80&fit=crop" alt="IE Intake for VW Jetta GLI" class="product-img">
+        <div class="product-info">
+          <span class="product-badge product-badge-alt">Runner Up</span>
+          <h3 class="product-name">Integrated Engineering (IE) Intake</h3>
+          <div class="product-price">~$349</div>
+          <ul class="product-pros">
+            <li>Lifetime filter warranty</li>
+            <li>Quieter cabin note than CTS</li>
+            <li>High quality aluminum inlet pipe</li>
+            <li>Strong community reputation</li>
+          </ul>
+          <a href="#" class="btn-product">Check Price <!-- PRODUCT LINK HERE --></a>
         </div>
+      </div>
 
-        <div class="content-wrapper">
-            <main class="main-content">
-                <article>
-                    <h1>The Ultimate Guide to Upgrading Your 2023 Volkswagen Jetta GLI Autobahn</h1>
-                    
-                    <div class="meta-row">
-                        <div class="meta-item">
-                            <span>📅 March 5, 2026</span>
-                        </div>
-                        <div class="meta-item">
-                            <span>⏱️ 8 min read</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="category-tag">Performance</span>
-                        </div>
-                    </div>
+      <h2 class="reveal">Final verdict</h2>
+      <p class="reveal">Both intakes are solid choices for the 2023 Jetta GLI Autobahn. If you want more driver engagement and a sportier sound, go with CTS Turbo. If you prefer a cleaner, quieter install with a lifetime warranty, go with IE. Either way, this is one of the best value-per-dollar mods available for the A7 GLI platform and a natural first step before adding a tune.</p>
+    </main>
 
-                    <div class="article-body">
-                        <p>The 7th generation Volkswagen Jetta GLI Autobahn represents the pinnacle of VW's sport sedan engineering, built on the proven MQB platform. With its 2.0L turbocharged 4-cylinder engine producing 228 horsepower and 258 lb-ft of torque, this front-wheel drive performance machine delivers exhilarating acceleration and impressive fuel economy of 26 city / 37 highway MPG with the standard 6-speed manual transmission.</p>
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+      <div class="sidebar-widget reveal">
+        <h4>Related Guides</h4>
+        <ul class="related-list">
+          <li><a href="#">COBB Accessport Stage 1 Review</a></li>
+          <li><a href="#">Best Exhaust Upgrades for the GLI</a></li>
+          <li><a href="#">GLI Suspension Mods Explained</a></li>
+          <li><a href="#">Wheel Fitment Guide for the A7 GLI</a></li>
+          <li><a href="#">Travel Assist Fault Fix</a></li>
+        </ul>
+      </div>
 
-                        <p>What sets the GLI Autobahn apart from competitors like the Honda Civic Si and Hyundai Elantra N is its refined balance of performance and practicality. The adaptive sport-tuned suspension and multi-link rear setup (as opposed to the torsion beam found on standard Jetta models) provide exceptional handling dynamics, while the front brakes shared with the previous-generation Golf R ensure confident stopping power in all conditions.</p>
+      <div class="sidebar-widget author-box reveal">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop" alt="Author" class="author-img">
+        <h4>About the author</h4>
+        <p>Owner of a 2023 Jetta GLI Autobahn in Opal White with the Black Package. Running Stage 1 on 93 octane with CTS Turbo intake and a few other mods. Writing about what actually works.</p>
+      </div>
 
-                        <p>The Black Package adds a sophisticated aesthetic upgrade to the Opal White exterior, featuring 18-inch gloss black alloy wheels, black painted roof, black mirror caps, and a black rear spoiler. Inside, the MIB3 infotainment system with its 8-inch touchscreen integrates seamlessly with the 10.25-inch digital cockpit, while the Beats Audio 400W 9-speaker system delivers concert-quality sound reproduction that transforms every drive into an immersive experience.</p>
+      <!-- ADSENSE PLACEHOLDER -->
+      <!--
+      <div class="sidebar-widget ad-widget">
+        Paste Google AdSense code here
+      </div>
+      -->
+    </aside>
+  </div>
 
-                        <p>Equipped with a limited-slip differential and available with either the responsive 6-speed manual or the lightning-quick 7-speed DSG dual-clutch automatic transmission, the GLI Autobahn offers driving enthusiasts the best of both worlds. While it produces 13 fewer horsepower than its Golf GTI sibling and is based on an older version of the MQB platform, the GLI compensates with significantly more interior space, a larger trunk, and a lower entry price point, making it an exceptional value proposition.</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">GLI Garage</div>
+      <p class="footer-disc">This site may contain partner links. If you click and purchase we may earn a commission at no extra cost to you. All opinions are our own.</p>
+      <p class="footer-copy">&copy; 2025 GLI Garage. All rights reserved.</p>
+    </div>
+  </footer>
 
-                        <div class="product-box">
-                            <h3>AFE Momentum GT Cold Air Intake System</h3>
-                            <p class="product-price">$389.99</p>
-                            <p>Unlock additional horsepower and improve throttle response with this premium cold air intake designed specifically for the 2.0T EA888 engine found in the GLI.</p>
-                            
-                            <h4>Pros</h4>
-                            <ul>
-                                <li>Gains of 15-20 horsepower on stock tune</li>
-                                <li>Improved turbo spool sound</li>
-                                <li>Easy bolt-on installation under 2 hours</li>
-                                <li>Washable and reusable pro 5R filter</li>
-                            </ul>
-
-                            <h4>Cons</h4>
-                            <ul class="cons">
-                                <li>May require ECU tune for maximum gains</li>
-                                <li>Slight increase in intake noise</li>
-                            </ul>
-
-                            <!-- PRODUCT LINK HERE -->
-                        </div>
-
-                        <div class="product-box">
-                            <h3>Bilstein B14 PSS Coilover Suspension Kit</h3>
-                            <p class="product-price">$1,299.95</p>
-                            <p>Transform your GLI's handling with this adjustable coilover system that allows you to fine-tune ride height and damping for street or track use.</p>
-                            
-                            <h4>Pros</h4>
-                            <ul>
-                                <li>Fully adjustable ride height (1.2" to 2.0" drop)</li>
-                                <li>10-position damping adjustment</li>
-                                <li>Maintains daily drivability</li>
-                                <li>Lifetime warranty on shock bodies</li>
-                            </ul>
-
-                            <h4>Cons</h4>
-                            <ul class="cons">
-                                <li>Professional installation recommended</li>
-                                <li>Requires alignment after installation</li>
-                            </ul>
-
-                            <!-- PRODUCT LINK HERE -->
-                        </div>
-                    </div>
-                </article>
-            </main>
-
-            <aside class="sidebar">
-                <div class="sidebar-section">
-                    <h3>Related Posts</h3>
-                    <ul class="related-posts">
-                        <li>
-                            <a href="#">How the GLI Autobahn Compares to the GTI: Which Should You Buy?</a>
-                            <span class="post-date">February 28, 2026</span>
-                        </li>
-                        <li
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.create({
+      start: "top -60",
+      onEnter: () => document.getElementById('nav').classList.add('scrolled'),
+      onLeaveBack: () => document.getElementById('nav').classList.remove('scrolled'),
+    });
+    gsap.utils.toArray('.reveal').forEach(el => {
+      gsap.fromTo(el,
+        { opacity: 0, y: 36 },
+        { opacity: 1, y: 0, duration: 0.75, ease: "power2.out",
+          scrollTrigger: { trigger: el, start: "top 88%", toggleActions: "play none none none" }
+        }
+      );
+    });
+    gsap.from('.article-title', { opacity: 0, y: 50, duration: 1, ease: "expo.out", delay: 0.2 });
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
