@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Best Cold Air Intakes for the 2023 VW Jetta GLI | GLI GARAGE</title>
+<meta name="description" content="Tested intake upgrades for the 2023 Jetta GLI Autobahn 2.0T EA888. CTS Turbo vs IE vs stock from a real A7 owner.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+  :root {
+    --red:#c0392b; --red2:#96281b; --red-dim:rgba(192,57,43,.15);
+    --bg:#0a0a0b; --bg2:#111114; --bg3:#17171b; --bg4:#1d1d22;
+    --ink:#f0ece6; --ink2:rgba(240,236,230,.6); --ink3:rgba(240,236,230,.3);
+    --border:rgba(255,255,255,.07);
+    --fd:'Bebas Neue',sans-serif;
+    --fu:'Barlow Condensed',sans-serif;
+    --fb:'Crimson Pro',Georgia,serif;
+    --r:8px; --nav:68px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+
+  /* noise overlay */
+  body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.025;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size:180px}
+
+  /* utils */
+  .eyebrow{display:block;font-family:var(--fu);font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+  .tag{font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--red);color:#fff;padding:3px 10px;border-radius:2px}
+
+  /* image placeholders */
+  [data-gli]{background:var(--bg3);position:relative;overflow:hidden}
+  [data-gli]::after{content:'';position:absolute;inset:0;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.05),transparent);
+    background-size:200% 100%;animation:sh 1.8s ease-in-out infinite}
+  [data-gli].ok::after{display:none}
+  [data-gli] img{width:100%;height:100%;object-fit:cover;display:block}
+  @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fu);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 28px;border-radius:2px;border:none;cursor:pointer;transition:all .2s}
+  .btn-r{background:var(--red);color:#fff}
+  .btn-r:hover{background:var(--red2);transform:translateY(-2px);color:#fff}
+  .btn-g{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.22)}
+  .btn-g:hover{background:rgba(255,255,255,.07);color:var(--ink)}
+  .btn-sm{padding:9px 20px;font-size:12px}
+
+  /* ── NAV ── */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav);transition:background .35s,border-bottom .35s}
+  .nav.scrolled{background:rgba(10,10,11,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+  .nav-inner{max-width:1280px;margin:0 auto;padding:0 28px;height:100%;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:var(--fd);font-size:24px;letter-spacing:1px;color:var(--ink)}
+  .logo em{color:var(--red);font-style:normal}
+  .nav-links{display:flex;gap:4px}
+  .nav-links a{font-family:var(--fu);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ink2);padding:7px 12px;border-radius:4px;transition:color .2s,background .2s}
+  .nav-links a:hover{color:var(--ink);background:rgba(255,255,255,.07)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+  .burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
+  .burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+  .drawer{display:none;flex-direction:column;background:var(--bg2);border-top:1px solid var(--border);padding:16px 28px;gap:2px}
+  .drawer.open{display:flex}
+  .drawer a{font-family:var(--fu);font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ink2);padding:10px 0;border-bottom:1px solid var(--border)}
+  .drawer a:last-child{border-bottom:none}
+
+  /* ── HERO ── */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+  .hero-photo{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;background-color:var(--bg2);will-change:transform;transition:background-image .7s}
+  .hero-scrim{position:absolute;inset:0;z-index:1;
+    background:linear-gradient(120deg,rgba(10,10,11,.93) 0%,rgba(10,10,11,.65) 55%,rgba(10,10,11,.2) 100%),
+               linear-gradient(to top,rgba(10,10,11,.8) 0%,transparent 40%)}
+  .hero-body{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:calc(var(--nav)+60px) 28px 80px}
+  .hero-hed{font-family:var(--fd);font-size:clamp(88px,14vw,170px);line-height:.87;text-transform:uppercase;letter-spacing:-2px;margin-bottom:28px}
+  .hero-hed .l1{color:var(--ink);display:block}
+  .hero-hed .l2{color:transparent;-webkit-text-stroke:2px var(--red);display:block}
+  .hero-hed .l3{color:var(--ink);display:block}
+  .hero-hed .l4{color:var(--red);display:block}
+  .hero-deck{font-family:var(--fb);font-size:19px;color:var(--ink2);max-width:500px;margin-bottom:36px;line-height:1.6}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-kicker{position:absolute;bottom:32px;left:0;right:0;z-index:2;display:flex;gap:0;justify-content:center;
+    font-family:var(--fu);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--ink3)}
+  .hero-kicker .sep{margin:0 10px}
+  .hero-scroll{position:absolute;bottom:34px;right:40px;z-index:2;font-size:20px;color:var(--ink3);animation:bounce 2s ease-in-out infinite}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+  /* ── TICKER ── */
+  .ticker{background:var(--red);overflow:hidden;white-space:nowrap;padding:11px 0}
+  .ticker-track{display:inline-block;animation:tick 36s linear infinite;
+    font-family:var(--fu);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.85)}
+  .ticker-track b{margin:0 18px;opacity:.4;font-weight:400}
+  @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+  /* ── SECTIONS ── */
+  .section{padding:100px 0}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 28px}
+  .sec-hd{display:flex;align-items:flex-end;gap:48px;margin-bottom:56px;flex-wrap:wrap}
+  .sec-title{font-family:var(--fd);font-size:clamp(42px,6vw,72px);text-transform:uppercase;line-height:.9;letter-spacing:-.5px}
+
+  /* ── CARDS ── */
+  .featured{display:grid;grid-template-columns:1fr 380px;gap:20px;margin-bottom:60px}
+  .stack{display:flex;flex-direction:column;gap:20px}
+
+  .card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,border-color .3s}
+  .card:hover{transform:translateY(-5px);border-color:rgba(192,57,43,.4)}
+  .card-imgwrap{display:block;position:relative;overflow:hidden;flex-shrink:0}
+  .card-img{width:100%;background-size:cover;background-position:center;transition:transform .5s}
+  .card:hover .card-img{transform:scale(1.05)}
+  .card-imgwrap .tag{position:absolute;top:12px;left:12px}
+  .card-body{padding:20px;flex:1;display:flex;flex-direction:column}
+  .card-meta{font-family:var(--fu);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ink3);margin-bottom:4px}
+  .card-hed{font-family:var(--fu);font-weight:800;text-transform:uppercase;line-height:1.1;margin-bottom:10px}
+  .card-hed a:hover{color:var(--red)}
+  .card-dek{font-size:15px;color:var(--ink2);line-height:1.55;margin-bottom:16px}
+  .card-link{font-family:var(--fu);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:5px;margin-top:auto}
+  .card-link:hover{gap:9px;color:var(--red)}
+
+  /* hero card */
+  .card-hero .card-img{height:360px}
+  .card-hero .card-hed{font-size:26px}
+  /* compact */
+  .card-compact{flex-direction:row}
+  .card-compact .card-imgwrap{width:140px}
+  .card-compact .card-img{height:100%;min-height:120px}
+  .card-compact .card-hed{font-size:16px}
+  /* slim (swiper) */
+  .card-slim .card-img{height:200px}
+  .card-slim .card-hed{font-size:16px}
+
+  /* swiper nav */
+  .more-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+  .swiper-nav{display:flex;gap:8px}
+  .snav-btn{width:42px;height:42px;border-radius:50%;background:var(--bg4);border:1px solid var(--border);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,border-color .2s;font-size:14px}
+  .snav-btn:hover{background:var(--red);border-color:var(--red)}
+
+  /* ── SPECS ── */
+  .specs{background:linear-gradient(135deg,#1a0000,var(--bg));border-top:1px solid rgba(192,57,43,.25);border-bottom:1px solid rgba(192,57,43,.25);padding:64px 0;position:relative;overflow:hidden}
+  .specs::before{content:'228';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:var(--fd);font-size:320px;color:rgba(192,57,43,.04);line-height:1;pointer-events:none;user-select:none}
+  .specs-grid{display:grid;grid-template-columns:repeat(6,1fr)}
+  .spec{padding:20px 16px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+  .spec:last-child{border-right:none}
+  .spec-n{display:block;font-family:var(--fd);font-size:52px;color:var(--red);line-height:1}
+  .spec-u{display:block;font-family:var(--fu);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(192,57,43,.6)}
+  .spec-l{display:block;font-family:var(--fu);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink3);margin-top:6px}
+
+  /* ── ABOUT ── */
+  .about{background:var(--bg2);border-top:1px solid var(--border)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .about-frame{position:relative}
+  .about-frame::before{content:'';position:absolute;top:-16px;left:-16px;right:16px;bottom:16px;border:1px solid var(--red);border-radius:var(--r);opacity:.3;pointer-events:none}
+  .about-photo{aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;background:var(--bg3)}
+  .about-photo img{width:100%;height:100%;object-fit:cover}
+  .about-caption{font-family:var(--fu);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--ink3);margin-top:14px;text-align:center}
+  .about-stats{display:flex;gap:32px;margin-top:32px;padding-top:24px;border-top:1px solid var(--border);flex-wrap:wrap}
+  .about-stats strong{display:block;font-family:var(--fd);font-size:36px;color:var(--red);line-height:1}
+  .about-stats span{font-family:var(--fu);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ink3)}
+  .about-copy p{color:var(--ink2);font-size:17px;margin-bottom:16px}
+
+  /* ── CTA SECTION ── */
+  .cta-sec{position:relative;padding:120px 0;overflow:hidden}
+  .cta-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-color:var(--bg2)}
+  .cta-scrim{position:absolute;inset:0;background:rgba(10,10,11,.84)}
+  .cta-body{position:relative;z-index:2;text-align:center}
+  .cta-hed{font-family:var(--fd);font-size:clamp(48px,7vw,88px);text-transform:uppercase;letter-spacing:-1px;line-height:.9;margin-bottom:16px}
+  .cta-body p{color:var(--ink2);font-size:18px;margin-bottom:28px}
+  .cta-form{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+  .cta-form input{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:var(--ink);padding:13px 20px;border-radius:2px;font-family:var(--fb);font-size:17px;min-width:280px;outline:none;transition:border-color .2s}
+  .cta-form input:focus{border-color:var(--red)}
+  .cta-form input::placeholder{color:var(--ink3)}
+  .cta-form button{background:var(--red);color:#fff;border:none;padding:13px 28px;border-radius:2px;font-family:var(--fu);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s}
+  .cta-form button:hover{background:var(--red2)}
+
+  /* ── FOOTER ── */
+  .footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 0}
+  .footer-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+  .footer-nav{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+  .footer-nav a{font-family:var(--fu);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink2);transition:color .2s}
+  .footer-nav a:hover{color:var(--ink)}
+  .footer-disc{font-size:13px;color:var(--ink3);max-width:480px;line-height:1.5}
+  .footer-copy{font-family:var(--fu);font-size:12px;letter-spacing:1px;color:var(--ink3)}
+
+  /* ── DISC BAR ── */
+  .disc{background:rgba(192,57,43,.07);border-bottom:1px solid rgba(192,57,43,.18);padding:9px 0;
+    font-family:var(--fu);font-size:12px;letter-spacing:.5px;color:var(--ink2)}
+
+  /* ── ARTICLE HERO ── */
+  .a-hero{height:480px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:40px}
+  .a-hero-img{position:absolute;inset:0;background-size:cover;background-position:center;background-color:var(--bg2);transition:background-image .7s}
+  .a-hero-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,11,.95) 0%,rgba(10,10,11,.45) 60%,rgba(10,10,11,.1) 100%)}
+  .a-hero-body{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:0 28px}
+  .a-hed{font-family:var(--fd);font-size:clamp(36px,5vw,64px);text-transform:uppercase;line-height:.92;letter-spacing:-1px;max-width:800px}
+  .a-meta{display:flex;gap:16px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+  .a-meta-txt{font-family:var(--fu);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink3)}
+  .a-wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+  .a-layout{display:grid;grid-template-columns:1fr 340px;gap:56px;padding:48px 0 100px}
+  .a-lead{font-size:21px;font-style:italic;color:rgba(240,236,230,.85);border-left:3px solid var(--red);padding-left:22px;line-height:1.6;margin-bottom:28px}
+  .a-main h2{font-family:var(--fd);font-size:38px;text-transform:uppercase;letter-spacing:-.5px;margin:40px 0 14px;line-height:1}
+  .a-main p{color:var(--ink2);font-size:18px;margin-bottom:20px}
+
+  /* product box */
+  .product{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin:36px 0;position:relative;transition:border-color .25s}
+  .product:hover{border-color:rgba(192,57,43,.4)}
+  .product-badge{position:absolute;top:-1px;left:20px;font-family:var(--fu);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;background:var(--red);color:#fff;padding:3px 12px;border-radius:0 0 4px 4px}
+  .product-badge.alt{background:rgba(255,255,255,.1);color:var(--ink2)}
+  .product-img{width:100%;height:200px;border-radius:6px;overflow:hidden;margin:12px 0 20px}
+  .product h3{font-family:var(--fd);font-size:28px;text-transform:uppercase;margin-bottom:6px}
+  .product-price{font-family:var(--fd);font-size:32px;color:var(--red);margin-bottom:14px;line-height:1}
+  .product-pros{list-style:none;padding:0;margin-bottom:20px}
+  .product-pros li{font-size:16px;color:var(--ink2);padding:5px 0;display:flex;align-items:center;gap:8px}
+  .product-pros i{color:var(--red);font-size:14px;flex-shrink:0}
+
+  /* sidebar */
+  .sidebar{position:sticky;top:84px;display:flex;flex-direction:column;gap:20px}
+  .widget{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:22px}
+  .widget h4{font-family:var(--fu);font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+  .widget ul{list-style:none;padding:0;margin:0}
+  .widget ul li{border-bottom:1px solid var(--border)}
+  .widget ul li:last-child{border-bottom:none}
+  .widget ul a{display:block;padding:9px 0;font-size:15px;color:var(--ink2);transition:color .2s,padding-left .2s}
+  .widget ul a:hover{color:var(--red);padding-left:6px}
+  .widget p{font-size:15px;color:var(--ink2);line-height:1.55}
+  .author-img{width:80px;height:80px;border-radius:50%;overflow:hidden;margin:0 auto 14px;border:2px solid var(--red);background:var(--bg3)}
+  .author-img img{width:100%;height:100%;object-fit:cover}
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:1100px){.featured{grid-template-columns:1fr}.stack{flex-direction:row}.stack .card-compact{flex:1}}
+  @media(max-width:900px){.specs-grid{grid-template-columns:repeat(3,1fr)}.spec:nth-child(3){border-right:none}.about-grid{grid-template-columns:1fr}.a-layout{grid-template-columns:1fr}.sidebar{position:static}}
+  @media(max-width:768px){.hero-hed{font-size:clamp(72px,18vw,120px)!important}.stack{flex-direction:column}.section{padding:68px 0}.a-hero{height:340px}.a-hed{font-size:clamp(32px,7vw,52px)}.nav-links{display:none!important}.burger{display:flex!important}}
+  @media(max-width:540px){.specs-grid{grid-template-columns:repeat(2,1fr)}.spec:nth-child(2){border-right:none}.hero-kicker{display:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">GLI <em>GARAGE</em></a>
+    <div class="nav-links">
+      <a href="#">Intake</a><a href="#">Exhaust</a><a href="#">Tuning</a>
+      <a href="#">Suspension</a><a href="#">Wheels</a>
+    </div>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="drawer" id="drawer">
+    <a href="index.html">Home</a><a href="#">Intake</a><a href="#">Exhaust</a>
+    <a href="#">Tuning</a><a href="#">Suspension</a>
+  </div>
+</nav>
+
+<div class="disc" style="margin-top:var(--nav)"><div class="wrap">Partner links in this article. Purchases support this site at no cost to you.</div></div>
+
+<!-- ARTICLE HERO -->
+<div class="a-hero">
+  <div class="a-hero-img bg-type" data-gli id="ahImg"></div>
+  <div class="a-hero-scrim"></div>
+  <div class="a-hero-body">
+    <div class="a-meta">
+      <span class="tag">Intake</span>
+      <span class="a-meta-txt">Jan 2025</span>
+      <span class="a-meta-txt">9 min read</span>
+    </div>
+    <h1 class="a-hed" id="aHed">Best Cold Air Intakes<br>for the 2023 VW Jetta GLI Autobahn</h1>
+  </div>
+</div>
+
+<div class="a-wrap">
+  <div class="a-layout">
+    <main class="a-main">
+
+      <p class="a-lead" data-aos="fade-up">The GLI's EA888 2.0T is well-engineered from the factory, but the stock airbox is deliberately conservative. A cold air intake is one of the best first mods you can do — no tune needed, immediate improvement.</p>
+
+      <p data-aos="fade-up">The A7 Jetta GLI Autobahn produces 228 horsepower from the EA888 engine family. A better intake lets the turbo breathe more freely, improving spool time and giving you the induction sound the stock airbox completely muffles.</p>
+
+      <h2 data-aos="fade-up">What to look for</h2>
+      <p data-aos="fade-up">Confirm fitment specifically for the Jetta GLI, not just "MQB." The A7 Jetta routes differently from the Golf. Look for a sealed heat shield, high-flow cone filter, and confirmed A7 GLI compatibility in the listing.</p>
+
+      <div class="product" data-aos="fade-up">
+        <div class="product-badge">Top Pick</div>
+        <div class="product-img bg-type" data-gli></div>
+        <h3>CTS Turbo Intake — VW Jetta GLI</h3>
+        <div class="product-price">~$329</div>
+        <ul class="product-pros">
+          <li><i class="bi bi-check2-circle"></i> Confirmed A7 GLI fitment</li>
+          <li><i class="bi bi-check2-circle"></i> Full sealed heat shield</li>
+          <li><i class="bi bi-check2-circle"></i> Strong induction sound at WOT</li>
+          <li><i class="bi bi-check2-circle"></i> Under 2 hrs to install</li>
+        </ul>
+        <a href="#" class="btn btn-r btn-sm">Check Price <!-- AFFILIATE LINK --></a>
+      </div>
+
+      <p data-aos="fade-up">Running the CTS intake on our Opal White 2023 GLI for six months, the biggest difference shows up at partial throttle in Sport mode. Turbo spool from ~2,800 RPM is sharper and the mid-range pulls harder. Paired with COBB Stage 1 on 93 octane it is a genuinely rewarding combination.</p>
+
+      <h2 data-aos="fade-up">Runner Up: Integrated Engineering</h2>
+      <p data-aos="fade-up">IE makes a strong alternative for owners who want a quieter cabin note. The IE kit costs slightly more but carries a lifetime filter warranty and uses a higher-grade aluminum inlet tube.</p>
+
+      <div class="product" data-aos="fade-up">
+        <div class="product-badge alt">Runner Up</div>
+        <div class="product-img bg-type" data-gli></div>
+        <h3>IE Intake — VW Jetta GLI</h3>
+        <div class="product-price">~$349</div>
+        <ul class="product-pros">
+          <li><i class="bi bi-check2-circle"></i> Lifetime filter warranty</li>
+          <li><i class="bi bi-check2-circle"></i> Quieter cabin note</li>
+          <li><i class="bi bi-check2-circle"></i> Aluminum inlet pipe</li>
+          <li><i class="bi bi-check2-circle"></i> Strong community reputation</li>
+        </ul>
+        <a href="#" class="btn btn-r btn-sm">Check Price <!-- AFFILIATE LINK --></a>
+      </div>
+
+      <h2 data-aos="fade-up">Verdict</h2>
+      <p data-aos="fade-up">CTS Turbo for engagement and sound. IE for a cleaner, quieter install with a lifetime warranty. Either is a smart first mod for the 2023 Jetta GLI Autobahn.</p>
+
+    </main>
+
+    <aside>
+      <div class="sidebar">
+        <div class="widget" data-aos="fade-left">
+          <h4>Related Guides</h4>
+          <ul>
+            <li><a href="#">COBB Accessport Stage 1 Review</a></li>
+            <li><a href="#">Best Exhaust: APR vs AWE vs Milltek</a></li>
+            <li><a href="#">Suspension Mods for the A7 GLI</a></li>
+            <li><a href="#">Wheel Fitment: 2023 Jetta GLI</a></li>
+            <li><a href="#">Travel Assist Fault — No Dealer Fix</a></li>
+            <li><a href="#">Turbo Inlet Pipe Upgrade Guide</a></li>
+          </ul>
+        </div>
+        <div class="widget" data-aos="fade-left" data-aos-delay="80" style="text-align:center">
+          <div class="author-img bg-type" data-gli></div>
+          <h4>About the Author</h4>
+          <p>2023 Jetta GLI Autobahn, Opal White, Black Package. Stage 1 on 93 octane. CTS Turbo intake. Writing about what actually works.</p>
+        </div>
+        <!-- AdSense: <div class="widget">...</div> -->
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="logo">GLI <em>GARAGE</em></div>
+    <p class="footer-disc">Partner links in this article. Purchases support this site at no cost to you.</p>
+    <p class="footer-copy">© 2025 GLI GARAGE. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:900,once:true,offset:50});
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.create({
+  start:'top -70',
+  onEnter:     ()=>document.getElementById('nav').classList.add('scrolled'),
+  onLeaveBack: ()=>document.getElementById('nav').classList.remove('scrolled'),
+});
+gsap.from('#aHed',{opacity:0,y:50,duration:1,ease:'expo.out',delay:.3});
+document.getElementById('burger').addEventListener('click',function(){
+  this.classList.toggle('open');
+  document.getElementById('drawer').classList.toggle('open');
+});
+
+async function loadGLIImages(){
+  try{
+    const API='https://commons.wikimedia.org/w/api.php';
+    const members=await fetch(API+'?action=query&list=categorymembers&cmtitle=Category:Volkswagen_Jetta_VII_GLI&cmlimit=20&cmtype=file&format=json&origin=*').then(r=>r.json());
+    const files=(members.query?.categorymembers||[]).filter(f=>/\.(jpg|jpeg|png)/i.test(f.title)).slice(0,10);
+    const urls=await Promise.all(files.map(async f=>{
+      const d=await fetch(API+'?action=query&titles='+encodeURIComponent(f.title)+'&prop=imageinfo&iiprop=url&iiurlwidth=1200&format=json&origin=*').then(r=>r.json());
+      const pg=Object.values(d.query?.pages||{})[0];
+      return pg?.imageinfo?.[0]?.url||null;
+    }));
+    const good=urls.filter(Boolean);
+    if(!good.length)return;
+    let i=0;const n=()=>good[i++%good.length];
+    document.querySelectorAll('[data-gli]').forEach(el=>{
+      const url=n();
+      if(el.classList.contains('bg-type')){
+        el.style.backgroundImage='url('+url+')';
+        el.classList.add('ok');
+      } else {
+        el.innerHTML='<img src="'+url+'" alt="VW Jetta GLI" loading="lazy">';
+        el.classList.add('ok');
+      }
+    });
+  }catch(e){console.log('GLI images unavailable',e)}
+}
+loadGLIImages();
+
+</script>
+</body>
+</html>
