@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Template - GLI Garage</title>
+    <title>Article Template | GLI Garage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,24 +15,24 @@
         }
 
         body {
-            font-family: 'Exo 2', sans-serif;
-            background-color: #0a0a0a;
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
             color: #e0e0e0;
             line-height: 1.6;
         }
 
         nav {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            padding: 1.2rem 0;
-            border-bottom: 3px solid #d4af37;
             position: sticky;
             top: 0;
+            background: #111;
+            border-bottom: 2px solid #d4112a;
+            padding: 1.2rem 0;
             z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(212, 17, 42, 0.2);
         }
 
-        nav .container {
-            max-width: 1200px;
+        .nav-container {
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -40,16 +40,20 @@
             align-items: center;
         }
 
-        nav .logo {
+        .logo {
             font-family: 'Rajdhani', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
-            color: #d4af37;
+            color: #fff;
             text-decoration: none;
             letter-spacing: 1px;
         }
 
-        nav .nav-links a {
+        .logo span {
+            color: #d4112a;
+        }
+
+        .nav-links a {
             color: #e0e0e0;
             text-decoration: none;
             margin-left: 2rem;
@@ -57,44 +61,48 @@
             transition: color 0.3s;
         }
 
-        nav .nav-links a:hover {
-            color: #d4af37;
+        .nav-links a:hover {
+            color: #d4112a;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
         .disclosure-banner {
-            background-color: #1f1f1f;
-            border-left: 4px solid #d4af37;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border-left: 4px solid #d4112a;
             padding: 1rem 1.5rem;
-            margin: 2rem auto;
-            max-width: 1200px;
+            margin-bottom: 2rem;
+            border-radius: 4px;
             font-size: 0.9rem;
             color: #b0b0b0;
         }
 
         .disclosure-banner strong {
-            color: #d4af37;
+            color: #d4112a;
         }
 
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: 65% 35%;
+        .content-wrapper {
+            display: flex;
             gap: 2rem;
         }
 
-        article {
-            background-color: #141414;
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        .main-content {
+            flex: 0 0 65%;
+        }
+
+        .sidebar {
+            flex: 0 0 calc(35% - 2rem);
         }
 
         h1 {
             font-family: 'Rajdhani', sans-serif;
             font-size: 2.5rem;
-            color: #d4af37;
+            font-weight: 700;
+            color: #fff;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
@@ -102,38 +110,42 @@
         .meta-row {
             display: flex;
             gap: 1.5rem;
+            align-items: center;
             margin-bottom: 2rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid #2d2d2d;
+            border-bottom: 1px solid #333;
             font-size: 0.9rem;
             color: #888;
         }
 
-        .meta-row span {
+        .meta-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
         .category-tag {
-            background-color: #d4af37;
-            color: #0a0a0a;
+            background: #d4112a;
+            color: #fff;
             padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            font-weight: 600;
+            border-radius: 20px;
             font-size: 0.85rem;
+            font-weight: 600;
         }
 
-        article p {
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
+        .article-body {
+            font-size: 1.1rem;
             line-height: 1.8;
             color: #c0c0c0;
         }
 
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
         .product-box {
             background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
-            border: 2px solid #d4af37;
+            border: 2px solid #333;
             border-radius: 8px;
             padding: 1.5rem;
             margin: 2rem 0;
@@ -141,81 +153,65 @@
 
         .product-box h3 {
             font-family: 'Rajdhani', sans-serif;
-            color: #d4af37;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            color: #fff;
             margin-bottom: 0.5rem;
         }
 
-        .product-box .price {
-            font-size: 1.3rem;
-            color: #fff;
+        .product-price {
+            font-size: 1.4rem;
+            color: #d4112a;
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
-        .product-box .pros-cons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+        .product-box h4 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            color: #fff;
             margin-top: 1rem;
-        }
-
-        .product-box .pros, .product-box .cons {
-            background-color: #0a0a0a;
-            padding: 1rem;
-            border-radius: 4px;
-        }
-
-        .product-box .pros h4 {
-            color: #4caf50;
             margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .product-box .cons h4 {
-            color: #f44336;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
         }
 
         .product-box ul {
             list-style: none;
-            padding-left: 0;
+            margin-bottom: 1rem;
         }
 
-        .product-box li {
-            padding: 0.3rem 0;
-            font-size: 0.95rem;
+        .product-box ul li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
             color: #b0b0b0;
         }
 
-        .product-box li:before {
-            content: "• ";
-            color: #d4af37;
+        .product-box ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #d4112a;
             font-weight: bold;
-            margin-right: 0.5rem;
         }
 
-        aside {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+        .product-box.cons ul li:before {
+            content: "✗";
         }
 
-        .sidebar-box {
-            background-color: #141414;
-            padding: 1.5rem;
+        .sidebar-section {
+            background: #151515;
+            border: 1px solid #333;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
         }
 
-        .sidebar-box h3 {
+        .sidebar-section h3 {
             font-family: 'Rajdhani', sans-serif;
-            color: #d4af37;
             font-size: 1.4rem;
+            color: #fff;
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid #d4af37;
+            border-bottom: 2px solid #d4112a;
         }
 
         .related-posts {
@@ -225,7 +221,7 @@
         .related-posts li {
             margin-bottom: 1rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid #2d2d2d;
+            border-bottom: 1px solid #2a2a2a;
         }
 
         .related-posts li:last-child {
@@ -242,13 +238,13 @@
         }
 
         .related-posts a:hover {
-            color: #d4af37;
+            color: #d4112a;
         }
 
         .related-posts .post-date {
-            display: block;
             font-size: 0.85rem;
-            color: #888;
+            color: #666;
+            display: block;
             margin-top: 0.3rem;
         }
 
@@ -256,30 +252,38 @@
             text-align: center;
         }
 
-        .author-bio img {
-            width: 100px;
-            height: 100px;
+        .author-avatar {
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            border: 3px solid #d4af37;
-            margin-bottom: 1rem;
+            background: #d4112a;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
         }
 
-        .author-bio h4 {
-            color: #d4af37;
+        .author-name {
+            font-family: 'Rajdhani', sans-serif;
             font-size: 1.2rem;
+            color: #fff;
             margin-bottom: 0.5rem;
         }
 
-        .author-bio p {
-            font-size: 0.95rem;
-            color: #b0b0b0;
+        .author-description {
+            font-size: 0.9rem;
+            color: #888;
             line-height: 1.6;
         }
 
         .adsense-placeholder {
-            background-color: #1a1a1a;
-            border: 2px dashed #444;
-            padding: 3rem 1rem;
+            background: #1a1a1a;
+            border: 2px dashed #333;
+            padding: 3rem;
             text-align: center;
             color: #666;
             font-size: 0.9rem;
@@ -287,107 +291,135 @@
         }
 
         footer {
-            background-color: #0a0a0a;
-            border-top: 3px solid #d4af37;
+            background: #111;
+            border-top: 2px solid #d4112a;
             padding: 2rem 0;
             margin-top: 4rem;
             text-align: center;
-        }
-
-        footer .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            color: #666;
         }
 
         footer p {
-            color: #888;
-            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
 
         @media (max-width: 968px) {
-            .main-container {
-                grid-template-columns: 1fr;
-            }
-
-            nav .container {
+            .content-wrapper {
                 flex-direction: column;
-                gap: 1rem;
             }
 
-            nav .nav-links a {
-                margin-left: 1rem;
-                margin-right: 1rem;
+            .main-content,
+            .sidebar {
+                flex: 0 0 100%;
             }
 
-            .product-box .pros-cons {
-                grid-template-columns: 1fr;
+            h1 {
+                font-size: 2rem;
+            }
+
+            .meta-row {
+                flex-wrap: wrap;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="container">
-            <a href="index.html" class="logo">GLI GARAGE</a>
+        <div class="nav-container">
+            <a href="index.html" class="logo">GLI <span>GARAGE</span></a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="#">Reviews</a>
+                <a href="#">Modifications</a>
                 <a href="#">Maintenance</a>
-                <a href="#">Mods</a>
             </div>
         </div>
     </nav>
 
-    <div class="disclosure-banner">
-        <strong>Editorial Disclosure:</strong> GLI Garage is supported by our readers. When you purchase through links on our site, we may earn an affiliate commission at no additional cost to you. This helps us keep the content free and continue providing quality reviews and guides for the VW GLI community.
-    </div>
+    <div class="container">
+        <div class="disclosure-banner">
+            <strong>Editorial Disclosure:</strong> GLI Garage is reader supported. When you purchase through links on our site, we may earn an affiliate commission at no cost to you. This helps us continue creating quality content for the VW GLI community.
+        </div>
 
-    <div class="main-container">
-        <article>
-            <h1>Best Performance Upgrades for Your VW GLI: Complete Guide</h1>
-            
-            <div class="meta-row">
-                <span>📅 March 5, 2026</span>
-                <span>⏱️ 8 min read</span>
-                <span class="category-tag">PERFORMANCE</span>
-            </div>
-
-            <p>The Volkswagen GLI has always been the performance variant of the beloved Jetta, offering enthusiasts a perfect blend of everyday practicality and spirited driving dynamics. Whether you're looking to squeeze more horsepower from the turbocharged engine or improve handling characteristics on your favorite back roads, there are countless modifications available to transform your GLI into an even more capable machine. In this comprehensive guide, we'll explore the most effective performance upgrades that deliver real-world results without breaking the bank.</p>
-
-            <p>Before diving into specific modifications, it's essential to understand what makes the GLI special from the factory. The latest generation comes equipped with a turbocharged 2.0-liter EA888 engine producing substantial power and torque, paired with either a smooth shifting dual-clutch transmission or a traditional manual gearbox for purists. The suspension features sport-tuned dampers and springs, while the Torsen limited-slip differential on front-wheel-drive models helps put power down effectively during spirited driving. Understanding these baseline components helps you make informed decisions about which upgrades will provide the most noticeable improvements for your specific driving style and goals.</p>
-
-            <p>One of the most popular first modifications for GLI owners is an engine tune, which can unlock significant power gains by optimizing fuel delivery, boost pressure, and ignition timing. Modern tuning solutions range from plug-and-play handheld devices to custom dyno tunes that account for your specific modifications and fuel quality. Most quality tunes can add 50 to 80 horsepower and similar torque figures, transforming the GLI's acceleration characteristics while maintaining reliability when paired with proper supporting modifications. It's crucial to ensure your vehicle is mechanically sound before adding power, as increased stress on components can reveal underlying issues that may not have been apparent at stock power levels.</p>
-
-            <p>Beyond engine modifications, upgrading the intake, exhaust, and intercooler systems can provide both performance benefits and an enhanced driving experience. A high-flow intake system reduces restrictions and can improve throttle response, while a quality catback exhaust not only sounds better but also helps the engine breathe more efficiently at higher RPMs. An upgraded intercooler becomes increasingly important as you add power, keeping intake temperatures lower for consistent performance during extended driving sessions. When combined with an engine tune, these modifications work synergistically to extract maximum performance from the turbocharged engine while maintaining the reliability that Volkswagen owners expect from their vehicles.</p>
-
-            <div class="product-box">
-                <h3>APR Stage 1 ECU Tune</h3>
-                <div class="price">$599.00</div>
-                <p>The APR Stage 1 tune is one of the most popular and proven tuning solutions for the VW GLI, offering impressive power gains with factory-like reliability and drivability.</p>
-                <!-- PRODUCT LINK HERE -->
-                <div class="pros-cons">
-                    <div class="pros">
-                        <h4>Pros</h4>
-                        <ul>
-                            <li>Significant power increase</li>
-                            <li>Improved throttle response</li>
-                            <li>Maintains stock reliability</li>
-                            <li>Easy installation process</li>
-                            <li>Switchable programs available</li>
-                        </ul>
+        <div class="content-wrapper">
+            <main class="main-content">
+                <article>
+                    <h1>The Ultimate Guide to Upgrading Your 2023 Volkswagen Jetta GLI Autobahn</h1>
+                    
+                    <div class="meta-row">
+                        <div class="meta-item">
+                            <span>📅 March 5, 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span>⏱️ 8 min read</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="category-tag">Performance</span>
+                        </div>
                     </div>
-                    <div class="cons">
-                        <h4>Cons</h4>
-                        <ul>
-                            <li>May void powertrain warranty</li>
-                            <li>Requires premium fuel for best results</li>
-                            <li>Additional costs for installation</li>
-                        </ul>
+
+                    <div class="article-body">
+                        <p>The 7th generation Volkswagen Jetta GLI Autobahn represents the pinnacle of VW's sport sedan engineering, built on the proven MQB platform. With its 2.0L turbocharged 4-cylinder engine producing 228 horsepower and 258 lb-ft of torque, this front-wheel drive performance machine delivers exhilarating acceleration and impressive fuel economy of 26 city / 37 highway MPG with the standard 6-speed manual transmission.</p>
+
+                        <p>What sets the GLI Autobahn apart from competitors like the Honda Civic Si and Hyundai Elantra N is its refined balance of performance and practicality. The adaptive sport-tuned suspension and multi-link rear setup (as opposed to the torsion beam found on standard Jetta models) provide exceptional handling dynamics, while the front brakes shared with the previous-generation Golf R ensure confident stopping power in all conditions.</p>
+
+                        <p>The Black Package adds a sophisticated aesthetic upgrade to the Opal White exterior, featuring 18-inch gloss black alloy wheels, black painted roof, black mirror caps, and a black rear spoiler. Inside, the MIB3 infotainment system with its 8-inch touchscreen integrates seamlessly with the 10.25-inch digital cockpit, while the Beats Audio 400W 9-speaker system delivers concert-quality sound reproduction that transforms every drive into an immersive experience.</p>
+
+                        <p>Equipped with a limited-slip differential and available with either the responsive 6-speed manual or the lightning-quick 7-speed DSG dual-clutch automatic transmission, the GLI Autobahn offers driving enthusiasts the best of both worlds. While it produces 13 fewer horsepower than its Golf GTI sibling and is based on an older version of the MQB platform, the GLI compensates with significantly more interior space, a larger trunk, and a lower entry price point, making it an exceptional value proposition.</p>
+
+                        <div class="product-box">
+                            <h3>AFE Momentum GT Cold Air Intake System</h3>
+                            <p class="product-price">$389.99</p>
+                            <p>Unlock additional horsepower and improve throttle response with this premium cold air intake designed specifically for the 2.0T EA888 engine found in the GLI.</p>
+                            
+                            <h4>Pros</h4>
+                            <ul>
+                                <li>Gains of 15-20 horsepower on stock tune</li>
+                                <li>Improved turbo spool sound</li>
+                                <li>Easy bolt-on installation under 2 hours</li>
+                                <li>Washable and reusable pro 5R filter</li>
+                            </ul>
+
+                            <h4>Cons</h4>
+                            <ul class="cons">
+                                <li>May require ECU tune for maximum gains</li>
+                                <li>Slight increase in intake noise</li>
+                            </ul>
+
+                            <!-- PRODUCT LINK HERE -->
+                        </div>
+
+                        <div class="product-box">
+                            <h3>Bilstein B14 PSS Coilover Suspension Kit</h3>
+                            <p class="product-price">$1,299.95</p>
+                            <p>Transform your GLI's handling with this adjustable coilover system that allows you to fine-tune ride height and damping for street or track use.</p>
+                            
+                            <h4>Pros</h4>
+                            <ul>
+                                <li>Fully adjustable ride height (1.2" to 2.0" drop)</li>
+                                <li>10-position damping adjustment</li>
+                                <li>Maintains daily drivability</li>
+                                <li>Lifetime warranty on shock bodies</li>
+                            </ul>
+
+                            <h4>Cons</h4>
+                            <ul class="cons">
+                                <li>Professional installation recommended</li>
+                                <li>Requires alignment after installation</li>
+                            </ul>
+
+                            <!-- PRODUCT LINK HERE -->
+                        </div>
                     </div>
-                </div>
-            </div>
+                </article>
+            </main>
 
-            <p>Suspension upgrades represent another area where GLI owners can see dramatic improvements in handling and overall driving enjoyment. While the factory suspension is already sport-tuned, aftermarket coilovers or performance springs and dampers allow you to fine-tune ride height and damping characteristics to match your specific preferences. Upgraded sway bars reduce body roll during cornering, while performance bushings throughout the suspension improve steering response and overall chassis feel. For those who participate in autocross or track days, these modifications can shave seconds off lap times while still maintaining reasonable comfort for daily driving duties.</p>
-
-            <p>The braking system is often overlooked but becomes increasingly important as you add power and improve handling capabilities. Upgraded brake pads with higher temperature resistance prevent fade during spirited driving, while stainless steel brake lines provide a firmer pedal feel and more consistent braking performance. For serious performance enthusiasts, big brake kits with larger rotors and multi-piston
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Related Posts</h3>
+                    <ul class="related-posts">
+                        <li>
+                            <a href="#">How the GLI Autobahn Compares to the GTI: Which Should You Buy?</a>
+                            <span class="post-date">February 28, 2026</span>
+                        </li>
+                        <li
