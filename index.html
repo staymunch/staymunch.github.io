@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GLI Garage: Your ultimate source for Volkswagen GLI modification reviews, performance upgrades, and real world testing results.">
+    <meta name="keywords" content="VW GLI, Volkswagen GLI, GLI mods, GLI modifications, car mods, performance upgrades, MK7 GLI, MK8 GLI">
+    <meta name="author" content="GLI Garage">
+    <meta property="og:title" content="GLI Garage - Real mods. Real results.">
+    <meta property="og:description" content="Expert VW GLI modification reviews and performance upgrade guides">
+    <meta property="og:type" content="website">
+    <title>GLI Garage - VW GLI Modification Reviews & Performance Upgrades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Serif 4', serif;
+            background-color: #0f0f10;
+            color: #f0ece6;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #0f0f10;
+            border-bottom: 2px solid #e63022;
+            padding: 1.5rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e63022;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #f0ece6;
+            text-decoration: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #e63022;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a1b 0%, #0f0f10 100%);
+            padding: 8rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #2a2a2b;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            color: #f0ece6;
+            text-transform: uppercase;
+        }
+
+        .hero .tagline {
+            font-size: 2rem;
+            color: #e63022;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #f0ece6;
+            text-transform: uppercase;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .article-card {
+            background-color: #1a1a1b;
+            border: 1px solid #2a2a2b;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            border-color: #e63022;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #2a2a2b 0%, #1a1a1b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.2rem;
+            color: #4a4a4b;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .article-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #f0ece6;
+        }
+
+        .article-card p {
+            color: #b0aca6;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #e63022;
+            text-decoration: none;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #ff4535;
+        }
+
+        .about-section {
+            background-color: #1a1a1b;
+            padding: 4rem 2rem;
+            border-top: 1px solid #2a2a2b;
+            border-bottom: 1px solid #2a2a2b;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #f0ece6;
+            text-transform: uppercase;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #d0ccc6;
+            margin-bottom: 1rem;
+        }
+
+        .adsense-container {
+            background-color: #1a1a1b;
+            border: 2px dashed #2a2a2b;
+            padding: 2rem;
+            margin: 4rem 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #0a0a0b;
+            padding: 3rem 2rem;
+            border-top: 2px solid #e63022;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-disclosure {
+            background-color: #1a1a1b;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #e63022;
+        }
+
+        .footer-disclosure h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #e63022;
+        }
+
+        .footer-disclosure p {
+            color: #b0aca6;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #2a2a2b;
+            color: #6a6a6b;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: #e63022;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.3rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .about-content h2 {
+                font-size: 2rem;
+            }
+
+            .about-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">GLI GARAGE</a>
+        <ul class="nav-links">
+            <li><a href="#featured">Reviews</a></li>
+            <li><a href="#guides">Guides</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>GLI Garage</h1>
+        <p class="tagline">Real mods. Real results.</p>
+    </section>
+
+    <section class="container" id="featured">
+        <h2 class="section-title">Featured Articles</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <div class="article-image">Article Image</div>
+                <div class="article-content">
+                    <h3>Best Cold Air Intakes for the MK8 GLI</h3>
+                    <p>We put five popular cold air intake systems to the test on our 2022 GLI to see which one delivers the most gains. Dyno results, sound clips, and real world performance data included.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-image">Article Image</div>
+                <div class="article-content">
+                    <h3>Stage 2+ Turbo Upgrade: 6 Month Review</h3>
+                    <p>After six months and 8,000 miles with an IS38 turbo swap, we share the good, the bad, and everything you need to know before pulling the trigger on this popular upgrade path.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-image">Article Image</div>
+                <div class="article-content">
+                    <h3>Coilover Comparison: Budget vs Premium</h3>
+                    <p>Can a $700 coilover setup compete with the $1,800 big names? We installed both on identical GLIs and spent three months testing them on street and track to find out.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div class="adsense-container">
+        <!-- ADSENSE PLACEHOLDER: paste your AdSense code here -->
+    </div>
+
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>About GLI Garage</h2>
+            <p>GLI Garage is dedicated to providing honest, in depth reviews of performance modifications for the Volkswagen GLI. We're not here to sell you parts or push affiliate links. We're enthusiasts who buy, install, and test the mods ourselves so you can make informed decisions about your build.</p>
+            <p>Every modification we review goes through extensive real world testing, including dyno runs, data logging, and thousands of miles of driving. We cover everything from budget friendly upgrades to high end performance parts, always with transparency about costs, installation difficulty, and actual results.</p>
+            <p>Whether you're running a bone stock daily driver or a fully built track weapon, GLI Garage is here to help you choose the right modifications for your goals and budget.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-disclosure">
+                <h3>Editorial Disclosure</h3>
+                <p>GLI Garage maintains editorial independence in all product reviews and recommendations. We purchase the majority of products we test with our own funds. In cases where manufacturers provide products for review, this is clearly disclosed in the article. We are not paid for positive reviews, and all opinions expressed are our own based on thorough testing and real world use.</p>
+                <p>Some links on this site may be affiliate links, which means we may earn a small commission if you make a purchase through them, at no additional cost to you. These commissions help support the site and allow us to continue providing detailed, unbiased reviews. Our affiliate relationships never influence our editorial content or recommendations.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GLI Garage. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
